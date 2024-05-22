@@ -1,81 +1,75 @@
 <form class="max-w-md mx-auto pt-10 px-3">
-  <div class="relativem mb-4">
+  <!-- <div class="relative mb-4">
     <label for="input_a" class="label"> 商品名稱 </label>
-    <mat-form-field class="example-full-width">
-      <mat-label>Number</mat-label>
-      <input
-        type="text"
-        placeholder="Pick one"
-        aria-label="Number"
-        matInput
-        [matAutocomplete]="auto"
-      />
-      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-        <!-- @for (option of filteredOptions | async; track option) {
-        <mat-option [value]="option">{{ option }}</mat-option>
-        } -->
-      </mat-autocomplete>
-    </mat-form-field>
-    <input type="text" name="input_a" class="input peer" placeholder="" />
-  </div>
-  <div class="relativem mb-4">
+    <input
+      type="text"
+      placeholder="Search for a street"
+      [matAutocomplete]="auto"
+      class="input"
+    />
+    <mat-autocomplete #auto="matAutocomplete">
+
+    </mat-autocomplete>
+  </div> -->
+  <div class="relative mb-4">
     <label for="input_a" class="label"> 商品分類 </label>
-    <input type="text" name="input_a" class="input peer" placeholder="" />
+    <input type="text" name="input_a" class="input" placeholder="" />
   </div>
-
-  <div class="relativem mb-4">
+  <div class="relative mb-4">
     <label for="input_a" class="label"> 產地標示 </label>
-    <input type="text" name="input_a" class="input peer" placeholder="" />
+    <input type="text" name="input_a" class="input" placeholder="" />
   </div>
-  <div class="relativem mb-4">
-    <label for="input_a" class="label"> 顏色 </label>
-    <input type="text" name="input_a" class="input peer" placeholder="" />
-  </div>
-  <div class="relativem mb-4">
-    <label for="input_a" class="label"> 尺寸 </label>
-    <input type="text" name="input_a" class="input peer" placeholder="" />
-  </div>
-  <div class="relativem mb-4">
+  <app-autocomplete
+    label="顏色"
+    [options]="colorOptions()"
+    (updateOptions)="colorOptions.set($event)"
+  ></app-autocomplete>
+  <app-autocomplete
+    label="尺寸"
+    [options]="sizeOptions()"
+    (updateOptions)="sizeOptions.set($event)"
+  ></app-autocomplete>
+  <div class="relative mb-4">
     <label for="input_a" class="label"> 備註 </label>
-    <input type="text" name="input_a" class="input peer" placeholder="" />
+    <input type="text" name="input_a" class="input" placeholder="" />
   </div>
-  <div class="relativem mb-4">
+  <div class="relative mb-4">
     <label for="input_a" class="label"> 內容 </label>
-    <input type="text" name="input_a" class="input peer" placeholder="" />
+    <input type="text" name="input_a" class="input" placeholder="" />
   </div>
-  <div class="relativem mb-4">
+  <div class="relative mb-4">
     <label for="input_a" class="label"> 尺寸表 </label>
-    <input type="text" name="input_a" class="input peer" placeholder="" />
+    <input type="text" name="input_a" class="input" placeholder="" />
   </div>
 
-  <div class="relativem mb-4">
+  <div class="relative mb-4">
     <label for="input_a" class="label"> 供應商名稱 </label>
-    <input type="text" name="input_a" class="input peer" placeholder="" />
+    <input type="text" name="input_a" class="input" placeholder="" />
   </div>
 
-  <div class="relativem mb-4">
+  <div class="relative mb-4">
     <label for="input_a" class="label"> 韓元進價 </label>
-    <input type="text" name="input_a" class="input peer" placeholder="" />
+    <input type="text" name="input_a" class="input" placeholder="" />
   </div>
-  <div class="relativem mb-4">
+  <div class="relative mb-4">
     <label for="input_a" class="label"> 匯率 </label>
-    <input type="text" name="input_a" class="input peer" placeholder="" />
+    <input type="text" name="input_a" class="input" placeholder="" />
   </div>
-  <div class="relativem mb-4">
+  <div class="relative mb-4">
     <label for="input_a" class="label"> 台幣進價 </label>
-    <input type="text" name="input_a" class="input peer" placeholder="" />
+    <input type="text" name="input_a" class="input" placeholder="" />
   </div>
-  <div class="relativem mb-4">
+  <div class="relative mb-4">
     <label for="input_a" class="label"> 原價 </label>
-    <input type="text" name="input_a" class="input peer" placeholder="" />
+    <input type="text" name="input_a" class="input" placeholder="" />
   </div>
-  <div class="relativem mb-4">
+  <div class="relative mb-4">
     <label for="input_a" class="label"> 售價 </label>
-    <input type="text" name="input_a" class="input peer" placeholder="" />
+    <input type="text" name="input_a" class="input" placeholder="" />
   </div>
   <button
     type="submit"
-    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+    class="text-white bg-blue-700 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-cente mb-5"
   >
     Submit
   </button>
